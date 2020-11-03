@@ -1,0 +1,65 @@
+html{
+    box-sizing: border-box;
+
+}
+
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    margin: 0;
+    font-size: inherit;
+}
+body{
+    min-width: 320px;
+    overflow-y: auto; //почему то влияет на скролл бар О_о
+  //  overflow-x: auto;  //отображением содержания блочного элемента по горизонтали
+    position: relative;
+    color: #000;
+    @extend %ubuntu-light;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.container{
+    max-width: 1220px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title{
+    @extend %ubuntu-regular;
+    font-size: 44px;
+    line-height: 53px;
+    padding-left: 25px;
+    margin-bottom: 55px;
+    padding-top: 70px;
+}
+
+.page-section{
+   // min-height: 100vh;
+  //  position: relative;
+  //  z-index: 1;
+  //  padding: 74px 0 50px;
+  //  margin-top: 150px;
+    margin: 50px auto;
+    max-width: 1920px;
+}
+

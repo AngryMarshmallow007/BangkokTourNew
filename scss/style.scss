@@ -1,0 +1,317 @@
+
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header{
+    background-image: url('../images/header-bg.jpg');
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+        text-transform: uppercase; //символы текста становятся прописными
+        font-size: 15px;
+        line-height: 17px;
+        @extend %ubuntu-medium;
+        padding-top: 40px;
+        
+    }
+    &__btn{
+        color: #fff;
+        background-color: transparent; //прозрачный фон
+        padding: 6px 28px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        margin-right: 8px;
+        text-transform: uppercase; //символы текста становятся прописными
+        cursor: pointer; //формa курсора
+        transition: all .3s;  //эффект перехода между двумя состояниями элемента
+        &:hover{        //стиль элемента при наведении
+            color: #000;
+            background-color: #fff;
+        }
+    }
+    &__phone{
+        font-size: 16px;
+        line-height: 18px;
+        @extend %ubuntu-bold;
+    }
+    &__title{
+        text-align: center;
+        @extend %ubuntu-bold;
+        font-size: 90px;
+        line-height: 128px;
+        color: #111;
+        margin-top: 43px;
+        span{
+            @extend %ubuntu-light;
+            font-size: 24px;
+            line-height: 28px;
+            color: #000000;
+            display: block;
+            margin-top: -20px;
+            margin-left: -800px;
+        }
+    }
+}
+
+.asian-way__slider-btn{
+    padding: 16px 26px;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    z-index: 5;
+    bottom: -51px;
+    svg{
+        stroke: #000;
+    }
+    &__left{
+        right: 63px;
+    }
+}
+
+.menu{
+    &__list-item{
+        display: inline-block;
+        & + .menu__list-item{ //расстояние с соседним 
+            padding-left: 20px;
+        }
+    }   
+}
+
+.asian-way{
+    &__inner{
+        display: flex;
+        justify-content: space-around;
+     //  padding: 50px 50px;
+    }
+    &__slider{
+        padding-top: 50px;
+        width: 60%;
+        margin-right: auto;
+    }
+    &__content{
+        width: 600px;
+        padding-top: 50px;
+        margin-right: auto;
+    }
+    &__text{
+        max-width: 440px;
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    &__list{
+        margin: 5px 0;
+        line-height: 30px;
+    }
+}
+
+.food{
+    &__title{
+        span{
+            @extend %ubuntu-light;
+            font-size: 19px;
+            line-height: 28px;
+            color: #000000;
+            display: block;
+            margin-top: -8px;
+            margin-left: 139px;
+        } 
+    }    
+   &__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+   }
+   &__list{
+    text-align: left;
+    margin: 5px 0;
+    line-height: 30px;
+    padding: 10px 0;
+   }
+   &__slider{
+    padding-top: 50px;
+    width: 50%;
+    margin-left: auto;
+   }
+    &__btn{
+        align-items: start; 
+        color: #111;
+        background-color: transparent; //прозрачный фон
+        padding: 6px 28px;
+        border: 1px solid #111;
+        border-radius: 3px;
+        margin-right: 8px;
+        text-transform: uppercase; //символы текста становятся прописными
+        cursor: pointer; //формa курсора
+        transition: all .3s;  //эффект перехода между двумя состояниями элемента
+        &:hover{        //стиль элемента при наведении
+            color: #fff;
+            background-color: #111;
+        }
+    }
+}
+
+.food__slider-btn{
+    padding: 16px 26px;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    cursor: pointer;
+    z-index: 5;
+    bottom: -51px;
+    svg{
+        stroke: #000;
+    }
+    &__left{
+        left: 63px;
+    }
+}
+
+.hotel{
+    &__title{
+        span{
+            @extend %ubuntu-light;
+            font-size: 19px;
+            line-height: 28px;
+            color: #000000;
+            display: block;
+            margin-top: -8px;
+            margin-left: 185px;
+        } 
+    }
+    &__inner{
+        display: flex;
+    }
+    &__images{
+        margin-right: 30px;
+    }
+    &__text{
+        margin-bottom: 20px;
+    }
+    &__gallery{
+        // margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        a{
+            max-width: 300px;
+            margin-top: 100px;
+        }
+    }
+}
+
+.price{ 
+    background: url('../images/price.png');
+    background-repeat: no-repeat;
+    background-position: top 20% right 10%;
+    
+    &__title{
+        span{
+            @extend %ubuntu-light;
+            font-size: 19px;
+            line-height: 28px;
+            color: #000000;
+            display: block;
+            margin-top: -8px;
+            margin-left: 43px;
+        } 
+    }
+    &__inner{
+        display: flex;
+    }
+    &__on-title,
+    &__off-title{
+        @extend %ubuntu-regular;
+        line-height: 28px;
+        margin-bottom: 50px;
+        font-size: 24px;
+        min-width: 300px;
+    }
+    &__on{
+        margin-right: 70px;
+        min-width: 300px;
+    }
+    &__off{
+        min-width: 300px;
+    }
+    &__list{
+        margin-bottom: 20px;
+    }
+}
+
+.contacts{
+    &__content{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @extend %ubuntu-regular;
+    }
+    &__form{
+        
+        width: 386px;
+        margin: 0 auto;
+    }
+    &__form-title{
+        margin-bottom: 10px;
+    }
+    &__form-input{
+        border: 1px solid #000;
+        display: block;
+        margin-bottom: 20px;
+        height: 50px;
+        width: 100%;
+        padding: 0 31px; /*Для текста в форме*/
+        line-height: 21px;
+        font-size: 18px;
+    }
+    &__form-input::placeholder {
+        color: #000000;
+    }
+    &__form-btn{
+        color: #111;
+        background-color: transparent; //прозрачный фон
+        padding: 6px 28px;
+        border: 1px solid #111;
+        border-radius: 3px;
+        margin-right: 8px;
+        text-transform: uppercase; //символы текста становятся прописными
+        cursor: pointer; //формa курсора
+        transition: all .3s;  //эффект перехода между двумя состояниями элемента
+        &:hover{        //стиль элемента при наведении
+            color: #fff;
+            background-color: #111;
+        }
+    }
+}
+
+.footer{
+    background-image: url('../images/header-bg.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-position: top center;  /*Для сжатия*/
+    padding-top: 96px;
+    &__inner{
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+    }
+    &__contacts{
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+
+
+@import "media";
